@@ -5,6 +5,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+/*
+ * @author CádizTech
+ * @version 2.4.0
+ */
+
+/*
+ * Esta  clase sirve para gestionar un carril bici , los cuales tienen una longitud determinada y cuentan con tramos, estos se pueden ir añadiendo.
+ * Tambien cuentan con estados distintos cada tramo. 
+ * Se puede generar un informe de cada carril bici junto a sus tramos
+ * 
+ */
 
 public class CarrilBiciManager {
 	
