@@ -43,6 +43,20 @@ public class CarrilBiciManager {
     }
     
    
+    /*
+     * 
+     * Este metodo añade un tramo a el carril bici creado con el que ees llamado,
+     * recive dos parametros
+     * 
+     * @param {@code nombre} nombre del tramo
+     * @param {@code longitud} longitud del tramo
+     * @throws si el nombre es vacio lanza la excepcion IllegalArgumentException
+     * @throws si la longitud del tramo es nula o menor que 0 lanza la excepcion IllegalArgumentException
+     * @exception la excepcion IllegalArgumentException indica que no se puede 
+     * dejar el nombre vacio o que la longitud debe de ser mayor que 0
+     * 
+     */
+
     public void añadirTramo(String nombre, double longitud) {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre del tramo no puede estar vacío");
@@ -54,6 +68,17 @@ public class CarrilBiciManager {
         estadoTramos.put(nombre, "En servicio");
     }
     
+    /*
+     * 
+     * Este metodo revice dos parametros los cuales se encargan de actualizar el estado 
+     * de el tramo indicado
+     * 
+     * @param {@code nombre} nombre del tramo
+     * @param {@code nuevoEstado} nuevo nombre del estado
+     * @throw si el nombre del tramo no correspode a ninguno, lanza la excepcion NoSuchElementException
+     * @exception NoSuchElementException indica que el nombre introducido del tramo no existe
+     * 
+     */    
     
 
     public void actualizarEstado(String nombre, String nuevoEstado) {
