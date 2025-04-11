@@ -1,4 +1,4 @@
-package Ejercicio;
+ackage Ejercicio;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -107,13 +107,30 @@ public class CarrilBiciManager {
         return estadoTramos.get(nombre);
     }
 
+    /*
+     * 
+     * Calcula la longitud total del carril
+     * @return devuelve la longitud de todos los tramos
+     */
     public double longitudTotal() {
         return tramos.values().stream().mapToDouble(Double::doubleValue).sum();
     }
+    
+    /*
+     * 
+     * Obtiene todos los tramos del carril
+     * 
+     */
 
     public Map<String, Double> obtenerTramos() {
         return Collections.unmodifiableMap(tramos);
     }
+    
+    /*
+     * 
+     * Realiza un informe del carril con toda la informacion de sus tramos
+     * @return devuelve el nombre de los tamos, el estado y la longitud de ellos
+     */
 
     public String generarInforme() {
         StringBuilder sb = new StringBuilder("INFORME DE CARRILES BICI - Bahía de Cádiz\n");
