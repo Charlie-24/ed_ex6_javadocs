@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
-
 /*
  * @author CádizTech
  * @version 2.4.0
@@ -19,11 +18,8 @@ import java.util.NoSuchElementException;
 
 public class CarrilBiciManager {
 	
-	/*
-	 * 
-	 * Cada carril bici cuenta con atributos como lo tramos y sus estados
-	 * 
-	 */
+	
+
 	
 	
     private final Map<String, Double> tramos; // nombre del tramo -> longitud en km
@@ -36,13 +32,11 @@ public class CarrilBiciManager {
      * la clase
      * 
      */
- 
     public CarrilBiciManager() {
         this.tramos = new HashMap<>();
         this.estadoTramos = new HashMap<>();
     }
     
-   
     /*
      * 
      * Este metodo añade un tramo a el carril bici creado con el que ees llamado,
@@ -78,8 +72,7 @@ public class CarrilBiciManager {
      * @throw si el nombre del tramo no correspode a ninguno, lanza la excepcion NoSuchElementException
      * @exception NoSuchElementException indica que el nombre introducido del tramo no existe
      * 
-     */    
-    
+     */
 
     public void actualizarEstado(String nombre, String nuevoEstado) {
         if (!tramos.containsKey(nombre)) {
@@ -87,12 +80,27 @@ public class CarrilBiciManager {
         }
         estadoTramos.put(nombre, nuevoEstado);
     }
-    
+    /*
+     * Se encarga de cambiar el estado del tramo indicado, recive dos parametros
+     * 
+     * @param {@code nombre} nombre del tramo
+     * @param {@code nuevoEstado} nuevo nombre del estado
+     * @deprecated
+     */
     public void cambiarEstado(String nombre, String estado) {
         actualizarEstado(nombre, estado);
     }
     
-       public String consultarEstado(String nombre) {
+    /*
+     * 
+     * Se encarga de devolver los estados de los tramos de un carril
+     * 
+     * @param {@code nombre} nombre del carril
+     * @throw si el nombre no corresponde a ningun tramo, lanza la excepcion NoSuchElementException
+     * 
+     */
+
+    public String consultarEstado(String nombre) {
         if (!estadoTramos.containsKey(nombre)) {
             throw new NoSuchElementException("El tramo indicado no existe");
         }
