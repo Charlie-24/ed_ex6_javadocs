@@ -16,11 +16,26 @@ import java.util.NoSuchElementException;
  * Se puede generar un informe de cada carril bici junto a sus tramos
  * 
  */
+
 public class CarrilBiciManager {
+	
+	/*
+	 * 
+	 * Cada carril bici cuenta con atributos como lo tramos y sus estados
+	 * 
+	 */
+	
 	
     private final Map<String, Double> tramos; // nombre del tramo -> longitud en km
     private final Map<String, String> estadoTramos; // nombre del tramo -> estado
 
+    
+    /*
+     * 
+     * Metodo constructor del carril que lo crea con los atributos estanciados en 
+     * la clase
+     * 
+     */
  
     public CarrilBiciManager() {
         this.tramos = new HashMap<>();
